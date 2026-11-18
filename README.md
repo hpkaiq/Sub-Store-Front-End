@@ -52,6 +52,12 @@ pnpm build
 pnpm preview
 ```
 
+### Cloudflare Pages password
+
+Set an encrypted `SITE_PASSWORD` in your Pages project's **Settings → Variables and Secrets** before deploying. Set it in Production and in Preview if you use preview builds. Open the site over HTTPS and sign in as `substore` with that password.
+
+On the Workers Free plan, select **Fail closed** in **Settings → Runtime** so that Pages keeps static files private if the Functions quota is exhausted. Review earlier deployments separately because their direct URLs can still serve versions built before the password check.
+
 ## LICENSE
 
 This project is under the GPL V3 LICENSE.
